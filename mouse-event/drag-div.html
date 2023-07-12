@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+  }
+
+  .drag-able {
+   width: 100px;
+   height: 100px;
+   background-color: red;
+  }
+
+ </style>
+</head>
+<body>
+ <div class="drag-able"></div>
+
+
+
+ <script>
+  const div = document.querySelector(".drag-able");
+  
+  let clickX, clickY;
+  let moveX, moveY;
+  let endX = 0, endY = 0;
+  let isClicked = false;
+  
+  div.addEventListener('mousedown', (e) => {
+   // console.log(clickX = e.clientX, clickY = e.clientY);
+   isClicked = true;
+   clickX = e.clientX;
+   clickY = e.clientY;
+   moveX = 0;
+   moveY = 0;
+
+   // console.log(e);
+  })
+  
+  window.addEventListener('mousemove', (e) => {
+   if(isClicked) {
+    moveX = e.clientX - clickX;
+    moveY = e.clientY - clickY;
+    div.style.transform = `translate(${moveX + endX}px, ${moveY + endY}px)`;
+   }
+  })
+  
+  div.addEventListener('mouseup', () => {
+   isClicked = false;
+   endX = moveX + endX;
+   endY = moveY + endY;
+   console.log(endX, endY);
+  })
+  
+  
+  
+  
+  
+  //상수선언
+  //const div = document.querySelector(".drag-able");
+
+  // let clickX, clickY;
+  // let moveX, moveY;
+  // let endX = 0, endY = 0;
+  // let isClicked = false;
+
+  //마우스클릭 이벤트, mousedown, (e)
+  // div.addEventListener('mousedown', (e) => {
+   // isClicked = true;
+   // consloe.log(e); 마우스 동작확인
+   // console.log(e.clientX, e.clientY); 마우스 클라이언트 동작확인
+   // clickX = e.clickX;
+   // clickY = e.clickY;
+  // })
+  
+  //마우스움직임 이벤트
+  //조건문으로 마우스가 클릭했을 때 조건 설정
+  // window.addEventListener('mousemove', () => { 따라다니는 주체를 더 큰 범위로 바꿔주기
+   // if(isClicked) {
+
+    // moveX = e.clickX - clickX; 클라이언트Y에서 클릭한 이동거리만큼 빼주기
+    // moveY = e.clickY - clickY; 클라이언트X에서 클릭한 이동거리만큼 빼주기
+    // div.style.transform = `translate(${moveX + endX}px, ${moveY + endY}px)`;
+    //js에서 스타일 지정해주고 이동한 거리에 끝나는 지점 더해주기
+   // }
+  // })
+
+  //마우스업 이벤트
+  // div.addEventListener('mouseup', () => { 
+  //  isClicked = false; 
+  //  endX = moveX + endX;
+  //  endY = moveY + endY;
+  //  console.log(endX, endY);
+  // })
+
+  // let moveX, moveY; 변수선언
+ </script>
+</body>
+</html>
