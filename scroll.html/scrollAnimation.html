@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  body {
+   height: 5000px;
+   background-image: linear-gradient(#555, #aaa);
+  }
+
+  .content {
+   color: white;
+   font-size: 32px;
+   font-weight: bold;
+   margin-top: 3000px;
+  }
+
+  .scroll-contents {
+   opacity: 0;
+   transform: translateX(-400px);
+   transition: 10000ms;
+
+  }
+  .scroll-contents.active {
+   opacity: 1;
+   transform: none;
+  }
+
+ </style>
+</head>
+<body>
+ <div class="content scroll-contents">나타난다!</div>
+
+ <script>
+  const scrollContent = document.querySelector(".scroll-contents");
+
+  window.addEventListener('scroll', (e) => {
+   // console.log(scrollContent.getBoundingClientRect().top - window.innerHeight < 0);
+   if(scrollContent.getBoundingClientRect().top - window.innerHeight < 0) {
+    scrollContent.classList.add('active');
+
+   } else {
+    scrollContent.classList.remove('active');
+
+   }
+  })
+  </script>
+</body>
+</html>

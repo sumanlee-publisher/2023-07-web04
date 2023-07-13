@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,9 +44,20 @@
   
   window.addEventListener('mousemove', (e) => {
    if(isClicked) {
-    moveX = e.clientX - clickX;
-    moveY = e.clientY - clickY;
-    div.style.transform = `translate(${moveX + endX}px, ${moveY + endY}px)`;
+    const top = e.clientY > 0;
+    const left = e.clientX > 0;
+    const bottom = e.clientY < window.innerHeight;
+    const right = e.clientX < window.innerWidth;
+    
+    
+    if(top && bottom && left && right) { 
+     moveX = e.clientX - clickX;
+     moveY = e.clientY - clickY;
+     div.style.transform = `translate(${moveX + endX}px, ${moveY + endY}px)`;
+    } else {
+     isClicked = false;
+     div.style.transform = `translate(${endX}px, ${endY}px)`;
+    }
    }
   })
   
