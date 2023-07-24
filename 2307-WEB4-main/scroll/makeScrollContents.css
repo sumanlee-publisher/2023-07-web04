@@ -1,0 +1,10 @@
+.scroll-contents {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: 1500ms;
+}
+
+.scroll-contents.active {
+    opacity: 1;
+    transform: none;
+}
