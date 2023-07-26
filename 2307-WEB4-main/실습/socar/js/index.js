@@ -71,3 +71,4 @@ function openHamberger() {
    hambergerClick.classList.remove("active");
   }, transition);
 }
+

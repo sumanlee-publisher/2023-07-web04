@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+  }
+
+  section {
+   height: 100vh;
+
+  }
+  .page1 {
+   background-color: red;
+  }
+  .page2 {
+   background-color: green;
+  }
+  .page3 {
+   background-color: blue;
+  }
+  .page4 {
+   background-color: yellow;
+  }
+
+ </style>
+</head>
+<body>
+ <div class="container">
+  <section class="page1"></section>
+  <section class="page2"></section>
+  <section class="page3"></section>
+  <section class="page4"></section>
+ </div>
+
+
+ <script>
+  
+  let index = 0;
+  window.addEventListener('mousewheel', (e)=> {
+   e.preventDefault();
+   window.scrollTo({top: window.innerHeight , behavior: 'smooth'});
+  }, {passive: false});
+
+
+ </script>
+</body>
+</html>
