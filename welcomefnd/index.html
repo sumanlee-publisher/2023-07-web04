@@ -1,81 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="/css/index.css">
  <link rel="stylesheet" href="/css/reset.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+ <style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+ </style>
  <title>Document</title>
 </head>
+
 <body>
  <header class="header-container">
-  <div class="header-video">
-   <video src="/img/main_pc.mp4" autoplay muted loop></video>
-  </div>
   <div id="head-logo">
    <a href="#"><img src="/img/header_logo_tp.svg" alt=""></a>
   </div>
   <div id="head-nav">
    <ul>
-    <li><a href="#">회사소개</a>
+    <li class="main-menu"><div href="#">회사소개</div>
      <ul>
-      <li><a href="#">웰컴에프엔디소개</a></li>
-      <li><a href="#">연혁</a></li>
+      <li class="hidden-menu"><a href="#">웰컴에프엔디소개</a></li>
+      <li class="hidden-menu"><a href="#">연혁</a></li>
      </ul>
     </li>
 
-    <li><a href="#">사업소개</a>
+    <li class="main-menu"><div href="#">사업소개</div>
      <ul>
-      <li><a href="#">ICT서비스</a></li>
-      <li><a href="#">디지털전략</a></li>
-      <li><a href="#">경영관리</a></li>
+      <li class="hidden-menu"><a href="#">ICT서비스</a></li>
+      <li class="hidden-menu"><a href="#">경영관리</a></li>
      </ul>
     </li>
 
-    <li><a href="#">홍보센터</a>
+    <li class="main-menu"><div href="#">홍보센터</div>
      <ul>
-      <li><a href="#">사내이야기</a></li>
-      <li><a href="#">뉴스</a></li>
-      <li><a href="#">실무자코멘트</a></li>
+      <li class="hidden-menu"><a href="#">사내이야기</a></li>
+      <li class="hidden-menu"><a href="#">뉴스</a></li>
+      <li class="hidden-menu"><a href="#">실무자코멘트</a></li>
      </ul>
     </li>
-    <li><a href="#">인재채용</a>
+    <li class="main-menu"><div href="#">인재채용</div>
      <ul>
-      <li><a href="#">입사지원</a></li>
-      <li><a href="#">웰컴복지</a></li>
+      <li class="hidden-menu"><a href="#">입사지원</a></li>
+      <li class="hidden-menu"><a href="#">웰컴복지</a></li>
      </ul>
     </li>
    </ul>
   </div>
   <div id="hamburger">
-   <a href="#" class="hamburger-icon"><span class="hidden">메뉴</span></a>
+   <!-- <a href="#" class="hamburger-icon"><span class="hidden">메뉴</span></a> -->
+   <span class="material-symbols-outlined open">menu</span>
+    <!-- <span class="material-symbols-outlined close">close</span> -->
   </div>
  </header>
 
  <section id="section-content1">
+  <!-- video -->
   <div class="background-video">
-   <!-- video -->
+   <video src="/img/main_pc.mp4" autoplay muted loop></video>
   </div>
+  
   <div class="animation-content">
-   <div class="dot-animation">
-    <p>Service</p>
+    <span class="dot"></span>
+    <span class="line"></span>
+    <span class="dot-right"></span>
+    <!-- <p>Service</p>
     <p>Tech</p>
     <p>Finance</p>
     <p>Pepole</p>
-    <p>Experience</p>
+    <p>Experience</p> -->
    </div>
 
-  </div>
   <div class="strong-text">
    <p class="text-h1">오늘보다</p>
    <p class="text-h1">더 나은 내일을 위해</p>
-   <p class="text-h2" >디지털과 기술이 만나 금융의 새로운 가능성을 넓혀갑니다</p>
+   <p class="text-h2">디지털과 기술이 만나 금융의 새로운 가능성을 넓혀갑니다</p>
   </div>
  </section>
- 
+
  <section id="section-content2">
   <h3>웰컴에프엔디의 디지털 역량</h3>
-  
+
   <div>
    <img src="/img/icon_m01.svg" alt="">
    <p>업력</p>
@@ -83,15 +96,15 @@
    <p class="count-1">년차</p>
    <p>2005년 6월 설립</p>
   </div>
-  
+
   <div>
    <img src="/img/icon_m02.svg" alt="">
    <p>임직원수</p>
    <p class="count strong-text">125</p>
    <p class="count-2">명</p>
-  <p>2021년 12월 기준</p>
+   <p>2021년 12월 기준</p>
   </div>
-  
+
   <div>
    <img src="/img/icon_m03.svg" alt="">
    <p>서비스국가</p>
@@ -99,14 +112,14 @@
    <p class="count-3">개국</p>
    <p>글로벌 신사업 지원</p>
   </div>
-  
+
   <div>
    <img src="/img/icon_m04.svg" alt="">
    <p>매출액</p>
    <p class="count strong-text">618</p>
    <div class="count-4">억</p>
-   <p>2021년 12월 기준</p>
-  </div>
+    <p>2021년 12월 기준</p>
+   </div>
 
  </section>
  <section id="section-content3">
@@ -115,7 +128,7 @@
    <p class="moving-content">Business</p>
   </div>
  </section>
- 
+
  <section id="section-content4">
   <div class="inner-text">
    <p>경쟁력 있는 ICT기술과 디지털 금융 시너지,</p>
@@ -137,9 +150,9 @@
        <p>업무확인하기</p>
       </div>
      </div>
-   </div>
-  </a>
-  <!-- 2번 -->
+    </div>
+   </a>
+   <!-- 2번 -->
    <a href="#" class="img-content1">
     <div>
      <img src="/img/main_compCover_2.jpg" alt="">
@@ -152,9 +165,9 @@
        <p>업무확인하기</p>
       </div>
      </div>
-   </div>
-  </a>
-  <!-- 3번 -->
+    </div>
+   </a>
+   <!-- 3번 -->
    <a href="#" class="img-content1">
     <div>
      <img src="/img/main_compCover_3.jpg" alt="">
@@ -167,11 +180,11 @@
        <p>업무확인하기</p>
       </div>
      </div>
-   </div>
-  </a>
+    </div>
+   </a>
   </div>
  </section>
- 
+
  <section id="section-content5">
   <div class="big-title">
    <p class="moving-content">Our Story</p>
@@ -208,26 +221,26 @@
    </div>
   </a>
  </section>
- 
+
  <section id="section-content7">
   <div class="link-text">
    <p>뉴스</p>
    <p class="arrow">바로가기</p>
   </div>
   <div class="news-container">
-   <div class="news-content"> 
+   <div class="news-content">
     <p>20주년 맞은 </p>
     <p>2022.10.20</p>
    </div>
-   <div class="news-content"> 
+   <div class="news-content">
     <p>원조의료가전</p>
     <p>2022.10.20</p>
    </div>
-   <div class="news-content"> 
+   <div class="news-content">
     <p>웰컴금융그룹</p>
     <p>2022.10.20</p>
-   </div>    
-   <div class="news-content"> 
+   </div>
+   <div class="news-content">
     <p>용산시대 개막</p>
     <p>2022.10.20</p>
    </div>
@@ -250,23 +263,24 @@
   <p><a href="#">개인정보처리방침</a></p>
   <p>© Welcome F&D Corp. All rights reserved.</p>
   <div class="family-site">
-  <ul>
-   <li><a href="#">웰컴금융그룹</a></li>
-   <li><a href="#">웰컴저축은행</a></li>
-   <li><a href="#">웰컴캐피탈</a></li>
-   <li><a href="#">웰릭스렌탈</a></li>
-   <li><a href="#">웰릭스 F&I</a></li>
-   <li><a href="#">웰컴페이먼츠</a></li>
-   <li><a href="#">WELCOME FINANCE, INC.</a></li>
-   <li><a href="#">WELCOME BANK (RURAL BANK)</a></li>
-   <li><a href="#">WELCOME LEASING LAO</a></li>
-   <li><a href="#">WELCOME FINANCE (CAMODIA)</a></li>
-   <li><a href="#">WELCOME DEBT TRADING</a></li>
-  </ul>
+   <ul>
+    <li><a href="#">웰컴금융그룹</a></li>
+    <li><a href="#">웰컴저축은행</a></li>
+    <li><a href="#">웰컴캐피탈</a></li>
+    <li><a href="#">웰릭스렌탈</a></li>
+    <li><a href="#">웰릭스 F&I</a></li>
+    <li><a href="#">웰컴페이먼츠</a></li>
+    <li><a href="#">WELCOME FINANCE, INC.</a></li>
+    <li><a href="#">WELCOME BANK (RURAL BANK)</a></li>
+    <li><a href="#">WELCOME LEASING LAO</a></li>
+    <li><a href="#">WELCOME FINANCE (CAMODIA)</a></li>
+    <li><a href="#">WELCOME DEBT TRADING</a></li>
+   </ul>
   </div>
   <div class="top-btn">
    <a href="#"><img src="/img/btn_top.svg" alt=""></a>
   </div>
  </footer>
 </body>
+
 </html>

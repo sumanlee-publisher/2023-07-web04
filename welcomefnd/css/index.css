@@ -1,0 +1,118 @@
+a {
+ text-decoration: none;
+}
+
+.header-container {
+ position: relative;
+ top: 0;
+ left: 0;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ z-index: 1;
+ padding: 60px;
+ margin: 0 auto;
+}
+
+.background-video {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+}
+
+#head-nav ul {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.hidden-menu{
+ display: none;
+}
+
+#head-nav div {
+ padding: 37px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.main-menu:hover .hidden-menu{
+ display: block;
+}
+
+.main-menu div {
+ color: white;
+}
+
+.main-menu div:hover {
+ color: red;
+}
+
+.hidden-menu:hover a {
+ color: red;
+}
+
+.hidden-menu a {
+ padding: 32px;
+ color: white;
+}
+
+.material-symbols-outlined {
+ cursor: pointer;
+ color: white;
+}
+
+/* animation */
+.animation-content {
+ width: 100px;
+ height: 20px;
+ border: 1px solid white;
+ z-index: 1;
+ position: relative;
+ top: 50%;
+ left: 0;
+}
+
+.dot {
+ width: 20px;
+ height: 20px;
+ position: absolute;
+ /* top: 50%; */
+ left: 0;
+ box-sizing: border-box;
+ border-radius: 50%;
+ background-color: red;
+}
+
+.line {
+ border: 1px solid red;
+ position: absolute;
+ width: 100%;
+ box-sizing: border-box;
+ top: 50%;
+ animation: line-animation 1s  both;
+}
+
+.dot-right {
+ position: absolute;
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+ box-sizing: border-box;
+ background-color: red;
+ animation: dot-animation duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes line-animation {
+ 0% {
+  width: 0;
+ }
+ 100% {
+  width: 100%;
+ }
+}
+
+@keyframes dot-animation {
+ 
+}
