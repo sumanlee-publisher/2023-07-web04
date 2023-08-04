@@ -14,6 +14,49 @@ a {
  margin: 0 auto;
 }
 
+.header-container.opan-menu {
+ background-color: white;
+ border-bottom: 1px solid gray;
+}
+
+
+.header-container.open-menu::after {
+ content: '';
+ display: block;
+ position: absolute;
+ width: 100%;
+ height: 40px;
+ background-color: white;
+ top: calc(100% + 1px);
+}
+
+.main-logo .open-menu {
+ display: none;
+}
+
+.hover-logo {
+ display: none;
+}
+
+.header-container.open-menu .hover-logo {
+ display: block;
+}
+
+#head-logo {
+ position: absolute;
+ left: 32px;
+}
+
+#head-logo>a {
+ display: block;
+ width: 158px;
+ height: 26px;
+}
+
+#head-logo>a>img {
+ width: 100%;
+ height: 100%;
+}
 .background-video {
  position: absolute;
  top: 0;
@@ -28,8 +71,28 @@ a {
 }
 
 .hidden-menu{
+ position: absolute;
+ top: calc(100% + 1px);
+ z-index: 10;
+ height: 40px;
+ width: 100%;
+ left: 0;
+ align-items: center;
+ justify-content: center;
+ gap: 40px;
+ opacity: 0;
+ transition: .2s;
  display: none;
 }
+.hidden-menu a:hover {
+ color: red;
+}
+
+.header-container.open-menu .hidden-menu {
+ display: flex;
+}
+
+.main-menu
 
 #head-nav div {
  padding: 37px;
@@ -67,7 +130,7 @@ a {
 .animation-content {
  width: 100px;
  height: 20px;
- border: 1px solid white;
+ /* border: 1px solid white; */
  z-index: 1;
  position: relative;
  top: 50%;
@@ -101,7 +164,7 @@ a {
  border-radius: 50%;
  box-sizing: border-box;
  background-color: red;
- animation: dot-animation duration timing-function delay iteration-count direction fill-mode;
+ animation: dot-animation 1s both;
 }
 
 @keyframes line-animation {
@@ -114,5 +177,10 @@ a {
 }
 
 @keyframes dot-animation {
- 
+ 0% {
+  transform: translateX(0px);
+ }
+ 100% {
+  transform: translateX(100px);
+ }
 }
